@@ -14,6 +14,8 @@ namespace kOS.Suffixed.Part
         public readonly DockingPortExt dockPort;
         public readonly bool hasDockingPort;
 
+        public readonly ConverterExt Converter;
+        public readonly bool hasConverter;
 
 
         public PartValueExt(global::Part part, SharedObjects sharedObj)
@@ -57,7 +59,7 @@ namespace kOS.Suffixed.Part
 
             hasDockingPort = false;
 
-            foreach (PartModule module in part.Modules) //Check for mutimode engine (let's not run into usual engine modules first)
+            foreach (PartModule module in part.Modules) 
             {
                 if (!hasDockingPort)
                 {
@@ -73,7 +75,21 @@ namespace kOS.Suffixed.Part
                 dockPort.ExtenderInitializeSuffixes(this);
             }
 
-
+            foreach (PartModule module in part.Modules) 
+            {
+                if (!hasConverter)
+                {
+                    ModuleResourceConverter dNode = module as ModuleResourceConverter;
+                    if (dNode != null)
+                    { hasConverter = true; }
+                }
+            }
+            AddSuffix("HASCONVERTER", new Suffix<bool>(() => hasConverter));
+            if (hasConverter)
+            {
+                Converter = new ConverterExt(part, Shared);
+                Converter.ExtenderInitializeSuffixes(this);
+            }
 
         }
 
