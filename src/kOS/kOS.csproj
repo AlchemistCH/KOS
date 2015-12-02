@@ -113,7 +113,13 @@
     <Compile Include="Suffixed\Orbitable.cs" />
     <Compile Include="Suffixed\PartModuleField\PartModuleFields.cs" />
     <Compile Include="Suffixed\PartModuleField\PartModuleFieldsFactory.cs" />
+    <Compile Include="Suffixed\PartModuleField\ConverterFields.cs" />
+    <Compile Include="Suffixed\PartModuleField\DockingPortFields.cs" />
     <Compile Include="Suffixed\PartModuleField\GimbalFields.cs" />
+    <Compile Include="Suffixed\PartExt\ConverterExt.cs" />
+    <Compile Include="Suffixed\PartExt\PartExtender.cs" />
+    <Compile Include="Suffixed\PartExt\DockingPortExt.cs" />
+    <Compile Include="Suffixed\PartExt\PartValueExt.cs" />
     <Compile Include="Suffixed\Part\GimbalValue.cs" />
     <Compile Include="Suffixed\Part\ModuleEngineAdapter.cs" />
     <Compile Include="Suffixed\Part\PartValueFactory.cs" />
