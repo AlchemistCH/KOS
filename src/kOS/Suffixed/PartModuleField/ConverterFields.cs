@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace kOS.Suffixed.PartModuleField
 {
-    class ConverterFields : PartModuleFields
+    public class ConverterFields : PartModuleFields
     {
         private readonly ModuleResourceConverter converter;
 
