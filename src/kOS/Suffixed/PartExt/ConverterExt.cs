@@ -9,7 +9,7 @@ namespace kOS.Suffixed.PartExt
 {
 
 
-    class ConverterExt : PartExtender
+    public class ConverterExt : PartExtender
     {
         public readonly ListValue<ConverterFields> Converters;
 
